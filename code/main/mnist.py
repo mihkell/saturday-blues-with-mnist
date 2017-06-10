@@ -10,11 +10,6 @@ PICKLE_LABEL_FILENAME = "preprocessed_labels.pkl"
 
 
 def normalize(df):
-    # AGE = 'Age'
-    # ageMax = df[AGE].max()
-    # ageMin = df[AGE].min()
-    # df[AGE] = (df[AGE] - ageMin) / (ageMax - ageMin)
-    # df[AGE] = (df[AGE] ** 0.8 * 2 - 1)
     df /= 255.0
     print(df.as_matrix().shape)
     df = np.reshape(df.as_matrix(), (df.shape[0], 28, 28, 1))
